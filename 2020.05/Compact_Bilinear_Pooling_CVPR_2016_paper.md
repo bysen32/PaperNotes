@@ -110,18 +110,20 @@ $$C(\mathcal{X}):=\sum_{s\in\mathcal{S}}\phi(x_s) \tag{4}$$
 ## 7. Question
 
 - [x] bilinear pooling
-- spatial pyramid pooling
+- [ ] spatial pyramid pooling
 - [x] TS feature
-- hidden Markov models
-- circular convolution
+- [ ] hidden Markov models
+- [ ] circular convolution
 - [x] second order pooling
-- Fisher Vector
+- [ ] Fisher Vector
 - [x] kernel 性质
-- count sketch
-- VGG
+- [ ] count sketch
+- [ ] VGG
+- [ ] 紧凑双线性池化是如何提取图像特征的？
 
 ## 8. Extension
 
 Time Log
 
 - 2020.05.26 完成部分阅读工作
+- 2020.06.03 新问题：如何提取图像特征？

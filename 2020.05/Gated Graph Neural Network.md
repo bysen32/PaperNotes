@@ -91,3 +91,18 @@ $A_{v:}\in\R^{D|\mathcal{V}|\times 2D}$为节点$v$在矩阵$A^{out}$和$A^{in}$
    物理含义：每个节点通过两个神经网络训练，分别得到一个$score$向量，将两个向量进行关联。累加所有输出结果，最终得到一个**图级节点向量**
 
 ## 4 GGS-NNs (Gated Graph Sequence Neural Networks)
+
+若干个GG-NNs输出序列 $o^1,o^2,\dots,o^K$
+对于第$k$个输出步，定义节点注释$\mathcal{X}^k=[x^k_1;\dots;x^k_{|\mathcal{V}|}]^T \in\R^{|\mathcal{V}|\times L_{\mathcal{V}}}$
+使用两个GG-NNs，$\mathcal{F}^k_o,\mathcal{F}^k_{\mathcal{X}}$，都包含传播模型和输出模型
+
+- $\mathcal{F}^k_o$：从$\mathcal{X}^k$预测$\bold{o}^k$
+- $\mathcal{F}^k_{\mathcal{X}}$：从$\mathcal{X}^k$预测$\mathcal{X}^{k+1}$
+- 节点向量矩阵 $\mathcal{H}^{(k,t)} = [h^{(k,t)_1};\dots;h^{(k,t)}_{|\mathcal{V}|}]^T\in\R^{|\mathcal{V}|\times D}$
+  - $k$：第$k$个输出步
+  - $t$：第$t$个传播步
+- 另外，$\mathcal{F}^k_o,\mathcal{F}^k_o$可以共享同一个传播模型，单独的输出模型
+
+![20200601203514](https://raw.githubusercontent.com/bysen32/PicGo/master/20200601203514.png)
+
+==先看到这里==
