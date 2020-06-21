@@ -1,6 +1,7 @@
 # Bilinear CNN Models for Fine-grained Visual Recognition
 
 ## 1. Introduction
+
 提出了一个双线性模型，由两个基于CNNs特征提取器组成的识别架构。其输出在图像的每个位置使用外积相乘，并合并以获得图像描述符。以平移不变性的方式对局部特征进行建模，对细粒度分类特别有效。
 
 ![20200528082114](https://raw.githubusercontent.com/bysen32/PicGo/master/20200528082114.png)
@@ -49,3 +50,11 @@
 ## 目前存在的疑问
 
 - Fisher Vector
+
+## 小结
+
+## time log
+
+2020.06.10 概念不清，回头看
+2020.06.11 了解实现原理 tf
+
